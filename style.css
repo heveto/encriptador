@@ -1,0 +1,299 @@
+	body {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .pizarra {
+        width: 1440px;
+        height: 1024px;
+        font-family: 'Montserrat', sans-serif;
+        background: #F3F5FC;
+        color: #0a3871;
+    }
+
+    .logo {
+        float: left;        
+        margin-top: 40px;
+        margin-left: 54px;
+    }
+
+    .bloque1 {
+        float: left;
+        width: 75%;
+    }
+
+    .bloque2 {
+        float: right;
+        width: 25%;        
+    }
+
+    .mensaje {        
+        float: left;    
+        margin-top: 168px;
+        margin-left: 2px;
+        width: 680px;
+        height: 48px;
+        background: #F3F5FC;
+        border-style: hidden;
+        border-color: #F3F5FC;
+        color: #0a3871;
+        font-size: 2em;
+    }
+
+    .mensaje2 {        
+        float: left;        
+        margin-top: 168px;
+        margin-left: 2px;
+        width: 680px;
+        height: 288px;
+        background: #F3F5FC;
+        border-style: hidden;
+        border-color: #F3F5FC;
+        color: #0a3871;
+        font-size: 2em;
+    }
+
+    .frame1 {        
+        float: left;        
+        margin-top: 860px;
+        margin-left: -680px;
+        font-size: 12px;
+        opacity: 80%;
+    }
+
+    .frame3 {
+        float: left;        
+        margin-top: 860px;
+        margin-left: -680px;
+    }
+
+    .boton1 {
+        padding: 24px;
+        gap: 8px;
+        width: 328px;
+        height: 67px;
+        font-size: 1em;
+        color: white;
+        background: #0A3871;
+        border-radius: 24px;
+
+        /* Inside auto layout */
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+    }
+
+    .boton1:hover {        
+        transform: scale(1.04);
+    }
+
+    .boton2 {
+        padding: 24px;
+        margin: 2em;
+        gap: 8px;
+        width: 328px;
+        height: 67px;
+        font-size: 1em;       
+        color: #0a3871;
+        background: #d8dfe8;
+        border-radius: 24px;
+        border-color: #0a3871;
+        transition: 0.5s all;
+        cursor: pointer;
+
+        /* Inside auto layout */
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+    }
+
+    .boton2:hover {
+        transform: scale(1.04);
+    }
+
+    #munieco {
+        float: right;        
+        width: 95%;
+    }
+
+    .rectangle1 {
+        position: absolute;
+        top: 20px;
+        left: 1000px;
+        width: 400px;
+        height: 944px;
+        background: white;
+        margin-top: 1em;
+        text-align: center;
+        vertical-align: top;
+        box-sizing: border-box;
+        border-radius: 32px;
+    }
+
+    .rectangle2 {
+        position: absolute;
+        top: 20px;
+        left: 1000px;
+        width: 400px;
+        height: 944px;        
+        background: white;
+        margin-top: 1em;
+        text-align: center;
+        vertical-align: top;
+        box-sizing: border-box;
+        border-radius: 32px;
+    }
+
+    h2 {
+        position: relative;
+        top: 200px;
+        left: 30px;
+        width: 80%;
+        margin-top: 2em;
+        text-align: center;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 120%;
+
+        /* Gray/gray-500 */
+
+        color: #343A40;
+    }
+
+    .rectangle1 p {
+        position: relative;
+        top: 220px;
+        text-align: center;
+    }
+
+    .respuesta {
+        position: relative;
+        top: 72px;
+        width: 336px;
+        height: 770px;
+        border-style: hidden;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 150%;
+
+        /* Gray/gray-400 */
+        color: #495057;
+    }
+
+    .boton3 {
+        position: relative;
+        top: 48px;
+        padding: 24px;
+        margin-top: 30px;
+        width: 328px;
+        height: 67px;
+        font-size: 1em;       
+        color: #0a3871;
+        background: #ffffff;
+        border-radius: 24px;
+        border-color: #0a3871;
+        transition: 0.5s all;
+        cursor: pointer;
+        transition: 0.5s all;
+        cursor: pointer;
+    }
+
+    .boton3:hover {
+        transform: scale(1.04);
+    }
+
+
+/* Pantalla para tabletas */    
+
+@media screen and (max-width: 480px) {
+
+    .pizarra {
+        width: 768px;
+        height: 1174px;
+    }
+
+    #bloque1, #bloque2 {
+        width: 768px;
+        display: block;
+    }
+
+    .frame1, .frame3 {
+        position: relative; 
+        margin-top: 700px;
+        margin-left: -680px;
+    }
+
+    #frame1 {
+        position: relative;      
+        margin-top: 460px;
+        margin-left: 40px;
+    }
+
+    #frame3 {     
+        margin-top: 1em;
+        margin-left: 2.5em;
+    }
+
+    .mensaje, .mensaje2 {
+        margin-left: 1.5em;
+    }
+
+    #munieco {
+        width: 0%;
+    }
+
+    .rectangle1 {        
+        position: relative;
+        top: 990px;
+        left: 1em;
+        width: 95%;
+        height: 150px;
+    }
+
+    .rectangle2 {        
+        position: relative;
+        top: 940px;
+        left: 1em;
+        width: 95%;
+        height: 200px;
+    }
+
+    .respuesta {
+        width: 760px;
+        height: 150px;
+        position: relative;
+        top: 940px;
+        left: 6px;
+    }
+
+    h2 {
+        position: absolute;
+        top: 0px;
+        left: 50px;
+        width: 80%;
+        margin-top: 2em;
+        font-size: 24px;
+        text-align: center;
+
+        /* Gray/gray-500 */
+
+        color: #343A40;
+    }
+
+    .rectangle1 p {
+        position: absolute;
+        top: 90px;
+        left: 150px;
+        text-align: center;
+    }
+
+    .boton3 {
+        position: absolute;
+        margin-top: 8em;
+        margin-left: -340px;
+        width: 95%;
+    }
