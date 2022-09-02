@@ -10,6 +10,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+        <script type="text/javascript" src="encriptadorCesar.js"></script>
     </head>
 
     <body>
@@ -19,20 +21,22 @@
                 <h1><img src="imagenes/Logo.png" class="logo"></h1>
                 <label for="mensaje"></label>
 
-                <input type="email" id="mensaje" class="mensaje" required placeholder="ingrese un texto aquí">    
+                <input type="text" id="cadena" class="mensaje" required placeholder="ingrese un texto aquí">    
 
-                <label class="frame1" id="frame1"><img src="imagenes/Vector.png"> Solo letras minúsculas y sin acentos</label>
-                <div class="frame3" id="frame3">
-                    <input type="submit" value="Encriptar" class="boton1">
-                    <input type="submit" value="Desencriptar" class="boton2"> 
-                </div>                                   
+                <label id="frame1"><img src="imagenes/Vector.png"> Solo letras minúsculas y sin acentos</label>
+                
+                <div id="frame3">
+                    <input type="submit" value="Encriptar" class="boton1" onclick="codificar()">
+                    <input type="submit" value="Desencriptar" class="boton2" onclick="decodificar()">
+                </div> 
+                <div id="resultado"></div>                
             </section>
 
-            <section id="bloque2">
+            <section id="bloque2">                
                 <ul>
                     <li class="rectangle1">
                         <h2><img src="imagenes/Muñeco.png" id="munieco" media="(min-width:900px)">Ningún mensaje fue encontrado</h2>
-                        <p>Ingresa el texto que desees encriptar o desencriptar</p>
+                        <p>Ingresa el texto que desees encriptar o desencriptar</p>                       
                     </li>
                 </ul>
             </section>
