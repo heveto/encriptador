@@ -10,7 +10,6 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-
         <script type="text/javascript" src="encriptadorCesar.js"></script>
     </head>
 
@@ -26,17 +25,26 @@
                 <label id="frame1"><img src="imagenes/Vector.png"> Solo letras minúsculas y sin acentos</label>
                 
                 <div id="frame3">
-                    <input type="submit" value="Encriptar" class="boton1" onclick="codificar()">
-                    <input type="submit" value="Desencriptar" class="boton2" onclick="decodificar()">
+                    <input type="submit" value="Encriptar" class="boton1" onclick="encriptar()">
+                    <input type="submit" value="Desencriptar" class="boton2" onclick="desencriptar()">
                 </div> 
-                <div id="resultado"></div>                
+                               
             </section>
 
             <section id="bloque2">                
                 <ul>
-                    <li class="rectangle1">
-                        <h2><img src="imagenes/Muñeco.png" id="munieco" media="(min-width:900px)">Ningún mensaje fue encontrado</h2>
-                        <p>Ingresa el texto que desees encriptar o desencriptar</p>                       
+                    <li class="rectangle">
+                        <img src="imagenes/Muñeco.png" id="munieco">
+                        
+                        <div>
+                            <h2>Ningún mensaje fue encontrado</h2>
+                            <p id="texto">Ingresa el texto que desees encriptar o desencriptar</p>
+                        </div>          
+                        
+                    </li>
+                    <li>
+                        <h2 id="resultado"></h2>
+                        <input type="submit" value="Copiar" id="boton3" class="boton3" onclick="copiarResultado()">
                     </li>
                 </ul>
             </section>

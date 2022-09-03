@@ -1,11 +1,8 @@
-	body {
-        margin: 0px;
-        padding: 0px;
-    }
-
-    .pizarra {
-        width: 1440px;
-        height: 1024px;
+    .pizarra {        
+        display: flex;
+        height: 100vh;
+        justify-content: space-evenly;
+        align-items: stretch;
         font-family: 'Montserrat', sans-serif;
         background: #F3F5FC;
         color: #0a3871;
@@ -13,39 +10,26 @@
 
     .logo {
         float: left;        
-        margin-top: 40px;
-        margin-left: 54px;
+        margin-top: 2em;
+        margin-left: 1em;
     }
 
     .bloque1 {
         float: left;
-        width: 70%;
+        width: 70vw;
     }
 
     .bloque2 {
         float: right;
-        width: 30%;        
+        width: 30vw;        
     }
 
     .mensaje {        
         float: left;    
-        margin-top: 168px;
+        margin-top: 9vw;
         margin-left: 2px;
-        width: 680px;
-        height: 48px;
-        background: #F3F5FC;
-        border-style: hidden;
-        border-color: #F3F5FC;
-        color: #0a3871;
-        font-size: 2em;
-    }
-
-    .mensaje2 {        
-        float: left;        
-        margin-top: 168px;
-        margin-left: 2px;
-        width: 680px;
-        height: 288px;
+        width: 33vw;
+        height: 4rem;
         background: #F3F5FC;
         border-style: hidden;
         border-color: #F3F5FC;
@@ -55,23 +39,23 @@
 
     #frame1 {        
         float: left;        
-        margin-top: 860px;
-        margin-left: -680px;
+        margin-top: 78vh;
+        margin-left: -36vw;
         font-size: 12px;
         opacity: 80%;
     }
 
     #frame3 {
         float: left;        
-        margin-top: 860px;
-        margin-left: -680px;
+        margin-top: 58vh;
+        margin-left: 5vw;
     }
 
     .boton1 {
         padding: 24px;
         gap: 8px;
-        width: 328px;
-        height: 67px;
+        width: 22vw;
+        height: 4.2em;
         font-size: 1em;
         color: white;
         background: #0A3871;
@@ -88,11 +72,10 @@
     }
 
     .boton2 {
-        padding: 24px;
-        margin: 2em;
-        gap: 8px;
-        width: 328px;
-        height: 67px;
+        position: relative;
+        margin-left: 1em;
+        width: 22vw;
+        height: 4.2em;
         font-size: 1em;       
         color: #0a3871;
         background: #d8dfe8;
@@ -113,29 +96,19 @@
 
     #munieco {
         float: right;        
-        width: 95%;
+        width: 85%;
+        margin-top: 18vh;
+        margin-right: 2em;
+        display: block;
+        opacity: 100%;
     }
 
-    .rectangle1 {
+    .rectangle {
         position: absolute;
-        top: 20px;
-        left: 1000px;
-        width: 400px;
-        height: 944px;
-        background: white;
-        margin-top: 1em;
-        text-align: center;
-        vertical-align: top;
-        box-sizing: border-box;
-        border-radius: 32px;
-    }
-
-    .rectangle2 {
-        position: absolute;
-        top: 20px;
-        left: 1000px;
-        width: 400px;
-        height: 944px;        
+        top: 1em;
+        left: 70vw;
+        width: 28vw;
+        height: 92vh;
         background: white;
         margin-top: 1em;
         text-align: center;
@@ -146,33 +119,37 @@
 
     h2 {
         position: relative;
-        top: 200px;
-        left: 30px;
         width: 80%;
+        left: 2em;
         margin-top: 2em;
         text-align: center;
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 700;
         font-size: 24px;
-        line-height: 120%;
 
         /* Gray/gray-500 */
 
         color: #343A40;
     }
 
-    .rectangle1 p {
+    #texto {
         position: relative;
-        top: 220px;
+        top: 0.5em;
+        padding: 1em;
         text-align: center;
+        display: block;
     }
 
-    .respuesta {
-        position: relative;
-        top: 72px;
-        width: 336px;
-        height: 770px;
+    #resultado {
+        display: none;
+    }
+
+    .resultado {
+        position: absolute;
+        top: 50vh;
+        width: 100vw;
+        height: 70vh;
         border-style: hidden;
         font-family: 'Inter';
         font-style: normal;
@@ -184,13 +161,16 @@
         color: #495057;
     }
 
+    #boton3 {
+        display: block;
+    }
+
     .boton3 {
         position: relative;
-        top: 48px;
-        padding: 24px;
-        margin-top: 30px;
-        width: 328px;
-        height: 67px;
+        top: 84.5vh;
+        left: -1.5vw;
+        width: 25vw;
+        height: 4.2em;
         font-size: 1em;       
         color: #0a3871;
         background: #ffffff;
@@ -198,6 +178,7 @@
         border-color: #0a3871;
         transition: 0.5s all;
         cursor: pointer;
+        ;
         transition: 0.5s all;
         cursor: pointer;
     }
@@ -206,112 +187,213 @@
         transform: scale(1.04);
     }
 
-/* Pantalla para tabletas */    
+/* Pantalla de Tablet */    
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 920px) {
 
-    .pizarra {
-        width: 768px;
-        height: 1174px;
+    .mensaje { 
+        width: 80vw;
     }
 
-    #bloque1, #bloque2 {
-        width: 768px;
-        display: block;
-    }
-
-    #frame1, #frame3 {
+    #frame1 {
         position: relative; 
-        margin-top: 600px;
-        margin-left: -680px;
+        margin-top: 26vh;
+        margin-left: 0em;
     }
 
-    #frame {  
-    display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 24px;
-
-position: absolute;
-width: 688px;
-height: 67px;
-left: 100%;
-top: -100px; 
-
+    #frame3 {
+        position: absolute; 
+        margin-top: 5vh;
     }
 
-    .mensaje, .mensaje2 {
-        margin-left: 1.5em;
+    .boton1 {
+        position: absolute;
+        margin-top: 40vh;
+        margin-left: -4em;
+        width: 40vw;
+    }
+
+    .boton2 {
+        position: absolute;
+        margin-top: 40vh;
+        margin-left: 35vw;
+        width: 40vw;
+    }
+
+    .rectangle {        
+        position: absolute;
+        top: 90vw;
+        left: 1em;
+        width: 95%;
+        height: 35vh;
     }
 
     #munieco {
-        width: 0%;
-    }
-
-    .rectangle1 {        
-        position: relative;
-        top: 940px;
-        left: 1em;
-        width: 95%;
-        height: 150px;
-    }
-
-    .rectangle2 {        
-        display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 32px;
-gap: 32px;
-
-position: absolute;
-width: 688px;
-height: 343px;
-left: 40px;
-top: 1001px;
-
-    }
-    /*
-    .rectangle2 {        
-        position: relative;
-        top: 940px;
-        left: 1em;
-        width: 95%;
-        height: 200px;
-    }
-*/
-    .respuesta {
-        width: 760px;
-        height: 150px;
-        position: relative;
-        top: 940px;
-        left: 6px;
-    }
-
-    h2 {
-        position: absolute;
-        top: 0px;
-        left: 50px;
-        width: 80%;
-        margin-top: 2em;
-        font-size: 24px;
-        text-align: center;
-
-        /* Gray/gray-500 */
-
-        color: #343A40;
-    }
-
-    .rectangle1 p {
-        position: absolute;
-        top: 90px;
-        left: 150px;
-        text-align: center;
+        width: 0vw;
+        display: block;
     }
 
     .boton3 {
         position: absolute;
-        margin-top: 8em;
-        margin-left: -340px;
-        width: 95%;
+        margin-top: 140vh;
+        margin-left: 10vw;
+        width: 80vw;
     }
+
+@media screen and (max-width: 820px) {
+
+    #frame1 {
+        margin-top: 22vh;
+    }
+
+    .rectangle {        
+        position: absolute;
+        top: 80vw;
+        left: 1em;
+        width: 95%;
+        height: 35vh;
+    }
+}
+
+/* Pantalla para Celulares grandes*/    
+
+@media screen and (max-width: 620px) {
+
+    #frame1 {
+        margin-top: 14vh;
+    }
+
+    #frame3 {
+        margin-left: 8vw;
+    }
+}
+
+    /* Pantalla para Celulares grandes*/    
+
+@media screen and (max-width: 460px) {
+
+    #bloque1, #bloque2 {
+        width: 100vw;
+        display: block;
+    }
+
+    .mensaje {
+        margin-top: 2vh;
+        margin-left: 1.5em;
+        width: 85vw;
+    }
+
+    #frame1 {
+        position: absolute; 
+        margin-top: 45vh;
+        margin-left: -20vw;
+    }
+
+    #frame3 {
+        position: absolute; 
+        margin-top: 50vh;
+    }
+
+    .boton1 {
+        position: absolute;
+        margin-top: 0vh;
+        margin-left: 0.5em;
+        width: 85vw;
+    }
+
+    .boton2 {
+        position: relative;
+        margin-top: 9vh;
+        margin-left: 0.5em;
+        width: 85vw;
+    }
+
+    .rectangle {        
+        position: absolute;
+        top: 148vw;
+        left: 1em;
+        width: 95%;
+        height: 30vh;
+    }
+
+    #munieco {
+        width: 0vw;
+        display: block;
+    }
+
+    #texto {
+        display: block;
+    }
+
+    .boton3 {
+        position: absolute;
+        margin-top: 6vh;
+        margin-left: 1.9em;
+        width: 90vw;
+    }
+}
+
+/* Pantalla para Celulares */    
+
+@media screen and (max-width: 380px) {
+
+    .mensaje, h2 {
+        font-size: 1.2em;
+        width: 70vw;
+    }
+
+    .boton1, .boton2 {
+        margin-left: 1em;
+        width: 82vw;
+        height: 2.5em;
+        border-radius: 12px;
+    }
+
+    .boton3 {
+        margin-top: 8vh;
+        margin-left: 8vw;
+        height: 2.5em;
+        border-radius: 12px;
+    }
+    h2 {
+        margin-top: 1.5em;
+    }
+
+    .rectangle {        
+        position: absolute;
+        top: 140vw;
+        left: 1em;
+        width: 95%;
+        height: 30vh;
+    }
+
+
+/* Pantalla para Celulares  chicos*/    
+
+@media screen and (max-width: 300px) {
+
+    #frame1 {
+        margin-left: 0vw;
+    }
+
+    #frame3 {
+        margin-left: 0vw;
+    }
+
+    .boton1, .boton2 {
+        width: 90vw;
+    }
+
+    h2 {
+        margin-top: 1em;
+    }
+
+    .rectangle {        
+        position: absolute;
+        top: 160vw;
+        left: 1em;
+        width: 95%;
+        height: 30vh;
+    }
+
+}
