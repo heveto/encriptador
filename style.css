@@ -1,3 +1,5 @@
+/* Pantalla PC básica */
+
     .pizarra {        
         display: flex;
         height: 100vh;
