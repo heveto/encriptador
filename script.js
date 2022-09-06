@@ -117,7 +117,11 @@ function desencriptar() {
 	var cadena = document.querySelector("input").value;
 	var longCadena = cadena.length;
 
-	desencriptarlo (cadena,longCadena);
+	if (longCadena > 0) {
+		mostrarBoton();
+		desencriptarlo (cadena,longCadena);
+	} else {
+	}
 }
 
 function copiar(){
