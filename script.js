@@ -5,20 +5,14 @@
 Requisitos:
 - Debe funcionar solo con letras minúsculas
 - No deben ser utilizados letras con acentos ni caracteres especiales
-- Debe ser posible convertir una palabra para la versión encriptada también devolver una palabra encriptada para su versión original.
-
-Tenemos un periodo de tiempo de cuatro semanas para desarrollar el proyecto y vamos a trabajar con el sistema ágil de desarrollo, utilizando el Trello de la siguiente forma:
+- Debe ser posible convertir una palabra para la versión encriptada 
+- también devolver una palabra encriptada a su versión original.
 */
 
-var activo = false;
-
-
 function encriptarlo(texto,long) {
-	// Compara cadena letra por letra, si es una vocal la sustituye por valor cifrado.
+	// Cambia aminúsculas y compara cadena letra por letra, si es una vocal la sustituye por valor cifrado.
 	var cadena = texto.toLowerCase();
-	var coincidencia = false;
 	var resultado = "";
-	console.log("recibio " + cadena + long);
 	
 	for (var pos = 0; pos < long; pos++) {
 		switch(cadena[pos]) {
@@ -45,11 +39,9 @@ function encriptarlo(texto,long) {
 			default:
                 resultado += cadena[pos];
                 break;
-	    }
-    	console.log("asi va " + cadena[pos] + " " + resultado);		 
+	    }	 
 	}
 	return document.getElementById("resultado").innerHTML = resultado;
-	console.log(resultado + " resultante");
 }
 
 function mostrarBoton() {
@@ -65,29 +57,73 @@ function mostrarBoton() {
 	boton.style.display = "block";
 }
 
+var texto2 = document.querySelector("#texto2");
+
 function encriptar() {
 	// Lee cadena e inicia el cifrado.
 	var cadena = document.querySelector("input").value;
-	console.log("llego " + cadena);
 	var longCadena = cadena.length;
 	
 	if (longCadena > 0) {
 		mostrarBoton();
 		encriptarlo (cadena,longCadena);
-		activo = true;
 	} else {
-		console.log("no hay texto");
 	}
 }
 
-function desencriptando(cadena,long) {
-	// body...
+function desencriptarlo(texto,long) {
+	// Desencripta el mensaje.
+	var cadena = texto.toLowerCase();
+	var resultado = "";
+	document.getElementById("resultado").innerHTML = "";
+
+	for (var pos = 0; pos < long; pos++) {
+		switch(cadena[pos]) {
+            case "a":
+                resultado += "a";
+                pos += 1;
+                break;
+
+			case "e":
+                resultado += "e";
+                pos += 4;
+                break;
+
+			case "i":
+                resultado += "i";
+                pos += 3;
+                break;
+
+			case "o":
+                resultado += "o";
+                pos += 3;
+                break;
+
+			case "u":
+                resultado += "u";
+                pos += 3;
+                break;
+
+			default:
+                resultado += cadena[pos];
+                break;
+	    }		 
+	}
+	return document.getElementById("resultado").innerHTML = resultado;
 }
 
 function desencriptar() {
-	// body...
+	// Envia cadena a desencriptar.
+	var cadena = document.querySelector("input").value;
+	var longCadena = cadena.length;
+
+	desencriptarlo (cadena,longCadena);
 }
 
 function copiar(){
-	// body...
+	// Copia mensaje encriptado a caja para desencriptar.
+	var portaPapel = navigator.clipboard.writeText(resultado.innerHTML);
+	document.querySelector("input").value = document.getElementById("resultado").innerHTML;
+	document.getElementById("resultado").innerHTML = " Ahora puedes pegarlo como mensaje donde gustes o presionar Desencriptar!";
+	return portaPapel;
 }
